@@ -5,7 +5,7 @@ from selenium.webdriver.common.keys import Keys
 import getpass
 from email_att import sendEmail
 
-if __name__ == '__main__':
+def mail_attendance():
     # default values can be set
     user_input = input("Enter register number: ")
     pass_input = getpass.getpass("Eduserve password: ")
@@ -42,7 +42,6 @@ if __name__ == '__main__':
     Class Attendance % : {class_attend.text}
     Assembly Attendance % : {assembly_attend.text}
     '''
-
     sendEmail(SENDER_EMAIL, PASSWORD, TO, SUBJECT, MESSAGE)
 
     driver.close()
